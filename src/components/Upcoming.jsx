@@ -5,7 +5,7 @@ function Upcoming({ contests }) {
     const upcoming = contests.filter((contest) => {
         const now = new Date();
         const startTime = new Date(contest.start_time);
-        return contest.status === "BEFORE" && now < startTime;
+        return contest.status === "BEFORE" && now < startTime  && parseInt(contest.duration) < 14401; 
     });
     function getTimeUntilStart(start_time) {
       const now = new Date();

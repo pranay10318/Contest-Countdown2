@@ -3,7 +3,7 @@ import Card from './Card';
 
 function Ongoing({ contests }) {
     const ongoing = contests.filter(contest =>
-        contest.status === "CODING" && parseInt(contest.duration) < 7201
+        contest.status === "CODING" && parseInt(contest.duration) < 14401
     );
     function getTimeUntilEnd(end_time) {
       const now = new Date();
